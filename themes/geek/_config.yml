@@ -1,0 +1,14 @@
+logo_title: Social Dist0rtion Protocol
+
+style: black
+
+favicon: /favicon.ico
+
+menu:
+  home: /
+  about us: /about
+  careers: /careers
+
+
+highlight:
+  enable: false
