@@ -147,7 +147,7 @@ Given the feedback received, Social Dist0rtion Protocol is committed to repeat t
 
 ## Stay up to date!
 
-We have a nice newsletter and you should subscribe to it.
+Subscribe to our [Newsletter][12], we will send you occasional updates about what we are doing. And don't worry we won't spam, we are too lazy for that.
 
 <hr/>
 
@@ -176,6 +176,7 @@ We have a nice newsletter and you should subscribe to it.
 [9]: https://c3nav.de/
 [10]: https://github.com/social-dist0rtion-protocol/thc/blob/v0.0.1/app/src/Chapter.svelte#L21
 [11]: https://github.com/social-dist0rtion-protocol/thc/blob/v0.0.1/eth/contracts/TreasureHuntCreator.sol#L66
+[12]: https://lists.dist0rtion.com/postorius/lists/newsletter.lists.dist0rtion.com/
 [leaderboard:1]: https://twitter.com/dist0rtionproto/status/1211056455757029376
 [leaderboard:2]: https://twitter.com/dist0rtionproto/status/1211067763952885760
 [leaderboard:3]: https://twitter.com/dist0rtionproto/status/1211076983519625217
