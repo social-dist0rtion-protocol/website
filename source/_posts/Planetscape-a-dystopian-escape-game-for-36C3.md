@@ -78,7 +78,7 @@ As mentioned earlier, every time a correct password is found, a transaction is s
 3. The dApp generates `chapter_private_key` from `seed`.
 4. The dApp generates `signature = sign(address, chapter_private_key)`
 5. The dApp calls the `submit` method of the smart sontract passing `signature`.
-6. The Smart Contract checks the current `chapter` for `player_address` in its storage.
+6. The smart contract checks the current `chapter` for `player_address` in its storage.
 7. The Smart Contract loads the `chapter_address` for `chapter`.
 8. The Smart Contracts calculates `signing_address` by doing an `ecrecover(player_address, signature)`.
 9. If `signing_address == chapter_address`, then the Smart Contract updates the current chapter for the player, moving them to the next chapter.
