@@ -81,7 +81,7 @@ As mentioned earlier, every time a correct password is found, a transaction is s
 6. The smart contract checks the current `chapter` for `player_address` in its storage.
 7. The smart contract loads the `chapter_address` for `chapter`.
 8. The smart contracts calculates `signing_address` by doing an `ecrecover(player_address, signature)`.
-9. If `signing_address == chapter_address`, then the Smart Contract updates the current chapter for the player, moving them to the next chapter.
+9. If `signing_address == chapter_address`, then the smart contract updates the current chapter for the player, moving them to the next chapter.
 
 More information about the [creation][10] and [verification][11] of the proof can be found in the source code.
 
