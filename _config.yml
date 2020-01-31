@@ -5,8 +5,8 @@
 # Site
 title: Social Dist0rtion Protocol
 subtitle: ''
-description: 'Social Dist0rtion Protocl is a collective intelligence spawned in the waste products of social media virtual realities'
-keywords: 
+description: 'Social Dist0rtion Protocol is a collective intelligence spawned in the waste products of social media virtual realities'
+keywords:
   - social
   - distortion
   - protocol
@@ -50,7 +50,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
