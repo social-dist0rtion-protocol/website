@@ -114,7 +114,7 @@ Final results:
 
 - 254 player (excluding us) joined the game and finished **at least Chapter 0**. You can check the [list at the leaderboard](https://adventure.dist0rtion.com/#/leaderboard).
 - 3 players were running in parallel for the first price, it was really exciting to see that.
-- Ultimately, 12 player finished the game.
+- Ultimately, 12 players finished the game.
 - Some other players kept playing even after the CCC was over (somehow).
 
 And now, some charts!
