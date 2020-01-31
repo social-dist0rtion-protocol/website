@@ -57,7 +57,7 @@ We achieved that by leveraging our learnings from [Hunt Zuckerberg][3] and [Plan
 Leveraging blockchain technology and IPFS give us many advantages:
 
 - We don't have to manage any servers.
-- Each time a correct solution is found, a transaction is sent to the smart contract of the game. This feature allows us to easily create stats on the number of players and the difficulty of each level.
+- Each time a player finds a correct solution, a transaction is sent to the smart contract of the game. This allows us to easily create stats on the number of players and the difficulty of each level.
 - The smart contract of the game maps each chapter to its IPFS content hash, once the game is set up there is no way for the game masters to cheat.
 - (For the future) include other game masters to expand the main story or create sub-stories.
 
