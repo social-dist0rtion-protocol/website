@@ -86,7 +86,7 @@ As mentioned earlier, every time a correct password is found, a transaction is s
 More information about the [creation][10] and [verification][11] of the proof can be found in the source code.
 
 ## Marketing
-Given the importance of **operation Planetscape** we wanted to onboard as many people as possible. We are not acquainted with custom and traditions of the early 2000<sup id="a1">[1](#f1)</sup> (remember, we are from the future) so we tried three orthogonal strategies to engage with attendees of the Congress.
+Given the importance of **operation Planetscape**, we wanted to onboard as many people as possible. We are not acquainted with custom and traditions of the early 2000<sup id="a1">[1](#f1)</sup> (remember, we are from the future) so we tried three orthogonal strategies to engage with attendees of the Congress.
 
 ### Personal Envelope
 Before reaching the Congress we handcrafted 35 personal letters and embedded them in envelopes<sup id="a2">[2](#f2)</sup>. Each letter contained the text with the call to action to open the website, start the game, and enter the password for *Chapter 0*. Three SDP members carried them around the congress to personally onboard attendees of 36C3. Handing the envelope was **not** a trivial task and required interaction to assess the willingness of the prospect to participate to the game. Remember, we had a limited number of envelopes, so we had to play them carefully.
