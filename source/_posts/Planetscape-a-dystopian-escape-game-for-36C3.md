@@ -71,7 +71,7 @@ In order to orchestrate all different components of the game, Social Dist0rtion 
 [THC][0] played a crucial role in the creation of the game, allowing us to meet our high standards in terms of development experience. But THC was more than that. Fast prototyping and automatic deploying gave us the piece of mind we needed during our last hours of work.
 
 ### Zero Knowledge Proof
-As mentioned earlier, every time a correct password is found, a transaction is sent to the smart contract managing the game. Ethereum transactions are public, and we don't want players to cheat sniffing passwords submitted by others. To avoid that, we implemented a cheap zero-knowledge proof scheme. Roughly speaking, the scheme is the following:
+As mentioned earlier, every time a correct password is found, a transaction is sent to the smart contract. Ethereum transactions are public and we don't want players to sniff passwords submitted by others. To avoid that, we implemented a cheap zero-knowledge proof scheme. Roughly speaking, the scheme is the following:
 
 1. Given a valid `password`, a player's `player_address`:
 2. The dApp generates `seed = keccak256(password)`.
