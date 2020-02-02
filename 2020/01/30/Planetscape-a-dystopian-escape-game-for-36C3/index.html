@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>
+        Social Dist0rtion Protocol
+    </title>
+    
+<link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body id="bodyx">
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            Planetscape
+        </p>
+        <hr>
+    </div>
+    <div class="post-content">
+        <h1 id="Planetscape-a-dystopian-escape-game-for-36C3"><a href="#Planetscape-a-dystopian-escape-game-for-36C3" class="headerlink" title="Planetscape, a dystopian escape game for 36C3"></a>Planetscape, a dystopian escape game for 36C3</h1><p><img src="./header.png" alt=""></p>
+<!--
+## Summary
+**TL;DR:** We time traveled back to 2019 to set up **Planetscape**, a dystopian escape game for [36C3][-1] based on the dreadful effects of climate change. Planetscape is organized in 20 chapters, and requires players to solve quests in real life, explore the congress to find hints and interact with people. To submit solutions and progress with the story, players use a decentralized web application from their (mobile) browser. To deploy the game, we developed a free open source framework called [THC][0] that leverages **Ethereum**, **IPFS**, and a cheap **zero-knowledge proof** protocol based on asymmetric encryption. Planetscape had **254 players**, **1300** transactions to the smart contract, and **7 teams** reached level 20 and claimed their prize. The players' feedback was heartwarming: "We were about to leave the congress but we found Planetscape, and we stayed longer to play!", "Please make another escape game for the next congress!", "This was the best thing of the congress", "Highlight of this year" ([ref][1]), "We have no idea what you did but if you like it you have our support" (our parents).
+-->
+
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>We are Social Dist0rtion Protocol (SDP), a Decentralized Autonomous Organization from the future. We come from a time where transplanetary corporations commodified democracy, manipulated governments, and destroyed the environment, and there is nothing we can to to fix that. The only thing we have left is to travel back in time to convince humans to not repeat the same mistakes we did.</p>
+<p>In this article we describe our third time-travel operation, codename <strong>Planetscape</strong>. Designed and developed on top of our learnings from our previous operations (<a href="https://github.com/social-dist0rtion-protocol/hunt-zuckerberg" target="_blank" rel="noopener">Hunt Zuckerberg</a>, December 2018; <a href="https://leapdao.org/blog/Planet-A-ccc-ethberlin-recap/" target="_blank" rel="noopener">Planet A</a>, August 2019), Planetscape is an escape game developed to raise awareness on the <strong>dreadful effects of climate change</strong>.</p>
+<h2 id="Game"><a href="#Game" class="headerlink" title="Game"></a>Game</h2><p>On December 28th, 2019, Social Dist0rtion Protocol set up <strong>Planetscape</strong>, a game for the attendees of the 36th Chaos Communication Congress in Leipzig.</p>
+<p>The game is open, free, and doesn’t require any registration: anyone with a smartphone or a laptop could instantly join the game at any time for the duration of the Congress.</p>
+<p>The game starts by visiting the website <a href="https://adventure.dist0rtion.com/" target="_blank" rel="noopener">https://adventure.dist0rtion.com/</a> (note: the game is closed now). By opening the website, the player has access to the first <strong>chapter</strong> of the game that contains both a piece of the background story and a hint on where to find the <strong>puzzle</strong>. If solved, the puzzle reveals the <strong>password</strong> to the next chapter. By submitting the password to the website, the player will get a new piece of the story and a new puzzle to solve, and so on until the end of the game.</p>
+<p><strong>Planetscape</strong> features twenty chapters of increasing difficulty. Like a classic escape game, both story and puzzles were integrated with the surrounding environment. The Leipzig Congress Center became a futuristic planetary base surrounded by a post apocalyptic desert. The Fairydust a time machine to activate. Puzzles required players to move around the assemblies at the Congress to find secret codes (geocaching), use the internal navigation map (<a href="https://c3nav.de/" target="_blank" rel="noopener">c3nav</a>) to discover specific places, find a specific WiFi access point to connect to the social network that gobbled up the free internet, lockpick a box to reveal the password, and many others.</p>
+<p>Participants played the game in groups or individually. Two groups also merged to join forces to solve difficult puzzles. We didn’t enforce any rule regarding the size of the groups, we wanted people to have fun.</p>
+<p>Still, Planetscape is a <strong>competitive game</strong>, and we handed out prizes on a <em>first come first served</em> basis. The teams that claimed their prize are:</p>
+<ol>
+<li><a href="https://twitter.com/dist0rtionproto/status/1211056455757029376" target="_blank" rel="noopener">Brain-Protector 3000</a></li>
+<li><a href="https://twitter.com/dist0rtionproto/status/1211067763952885760" target="_blank" rel="noopener">TiPa@cccp</a></li>
+<li><a href="https://twitter.com/dist0rtionproto/status/1211076983519625217" target="_blank" rel="noopener">KingFluffificus</a></li>
+<li><a href="https://twitter.com/dist0rtionproto/status/1211103817460338689" target="_blank" rel="noopener">KdEPizzaCheese</a></li>
+<li><a href="https://twitter.com/dist0rtionproto/status/1211268983053307905" target="_blank" rel="noopener">Why me?</a></li>
+<li><a href="https://twitter.com/dist0rtionproto/status/1211394601069809664" target="_blank" rel="noopener">Team Smilecat</a></li>
+<li><a href="https://twitter.com/dist0rtionproto/status/1211722088823828480" target="_blank" rel="noopener">Team zzeeiikk</a></li>
+</ol>
+<p>The players’ feedback was heartwarming: “We were about to leave the congress but we found Planetscape, and we stayed longer to play!”, “Please make another escape game for the next congress!”, “This was the best thing of the congress”, “Highlight of this year” (<a href="https://twitter.com/mediaquery/status/1212043098127241218" target="_blank" rel="noopener">ref</a>), “We have no idea what you did but you have our support” (our parents).</p>
+<p><img src="./lockpick.jpg" alt=""></p>
+<h2 id="Technology"><a href="#Technology" class="headerlink" title="Technology"></a>Technology</h2><p>Planetscape components are:</p>
+<ul>
+<li>A web dApp that players use to read the story, submit passwords, and check the leaderboard.</li>
+<li>A smart contract to store the structure of the story, validate players’ submissions, and read the leaderboard.</li>
+<li>Encrypted JSON documents stored in IPFS that contain the actual text of the chapters.</li>
+</ul>
+<p>We pledged to create a <em>user-friendly application that would rely on decentralized technology only</em>. We want to live the decentralized dream with no compromises, developing a powerful dApp that would use Ethereum under the hood without exposing any details about blockchain and IPFS to the player. We committed to have <strong>instant onboarding</strong> by allowing people to play the game just by visiting a website.</p>
+<p>We achieved that by leveraging our learnings from <a href="https://github.com/social-dist0rtion-protocol/hunt-zuckerberg" target="_blank" rel="noopener">Hunt Zuckerberg</a> and <a href="https://leapdao.org/blog/Planet-A-ccc-ethberlin-recap/" target="_blank" rel="noopener">Planet A</a> by using a “burner-wallet”-like approach (the player’s wallet is created on the fly when opening the dApp for the first time). In order to make transactions players needed Ether. Given that the game was played on the <a href="https://www.rinkeby.io/" target="_blank" rel="noopener">Rinkeby</a> network, we set up a <em>gas station</em> that would simply <a href="https://rinkeby.etherscan.io/address/0x197970e48082cd46f277abdb8afe492bccd78300" target="_blank" rel="noopener">transfer</a> a small amount of Ether to new players.</p>
+<p>Leveraging blockchain technology and IPFS give us many advantages:</p>
+<ul>
+<li>We don’t have to manage any servers.</li>
+<li>Each time a player finds a correct solution, a transaction is sent to the smart contract of the game. This allows us to easily create stats on the number of players and the difficulty of each level.</li>
+<li>The smart contract of the game maps each chapter to its IPFS content hash, once the game is set up there is no way for the game masters to cheat.</li>
+<li>(For the future) include other game masters to expand the main story or create sub-stories.</li>
+</ul>
+<h3 id="Introducing-THC"><a href="#Introducing-THC" class="headerlink" title="Introducing THC"></a>Introducing THC</h3><p>In order to orchestrate all different components of the game, Social Dist0rtion Protocol (yes, still us) developed a game engine called <a href="https://github.com/social-dist0rtion-protocol/thc" target="_blank" rel="noopener">Treasure Hunt Creator</a> (<strong>THC</strong> for short) that, given a story structured in directories, is able to:</p>
+<ul>
+<li>Build and deploy the front-end application.</li>
+<li>Build, deploy and initialize the game smart contract on the Ethereum Network.</li>
+<li>Encrypt and deploy the chapters on IPFS.</li>
+</ul>
+<p><a href="https://github.com/social-dist0rtion-protocol/thc" target="_blank" rel="noopener">THC</a> played a crucial role in the creation of the game, allowing us to meet our high standards in terms of development experience. But THC was more than that. Fast prototyping and automatic deploying gave us the piece of mind we needed during our last hours of work.</p>
+<h3 id="Zero-Knowledge-Proof"><a href="#Zero-Knowledge-Proof" class="headerlink" title="Zero Knowledge Proof"></a>Zero Knowledge Proof</h3><p>As mentioned earlier, every time a correct password is found, a transaction is sent to the smart contract. Ethereum transactions are public and we don’t want players to sniff passwords submitted by others. To avoid that, we implemented a cheap zero-knowledge proof scheme. Roughly speaking, the scheme is the following:</p>
+<ol>
+<li>Given a valid <code>password</code>, a player’s <code>player_address</code>:</li>
+<li>The dApp generates <code>seed = keccak256(password)</code>.</li>
+<li>The dApp generates <code>chapter_private_key</code> from <code>seed</code>.</li>
+<li>The dApp generates <code>signature = sign(address, chapter_private_key)</code></li>
+<li>The dApp calls the <code>submit</code> method of the smart sontract passing <code>signature</code>.</li>
+<li>The smart contract checks the current <code>chapter</code> for <code>player_address</code> in its storage.</li>
+<li>The smart contract loads the <code>chapter_address</code> for <code>chapter</code>.</li>
+<li>The smart contracts calculates <code>signing_address</code> by doing an <code>ecrecover(player_address, signature)</code>.</li>
+<li>If <code>signing_address == chapter_address</code>, then the smart contract updates the current chapter for the player, moving them to the next chapter.</li>
+</ol>
+<p>More information about the <a href="https://github.com/social-dist0rtion-protocol/thc/blob/v0.0.1/app/src/Chapter.svelte#L21" target="_blank" rel="noopener">creation</a> and <a href="https://github.com/social-dist0rtion-protocol/thc/blob/v0.0.1/eth/contracts/TreasureHuntCreator.sol#L66" target="_blank" rel="noopener">verification</a> of the proof can be found in the source code.</p>
+<h2 id="Marketing"><a href="#Marketing" class="headerlink" title="Marketing"></a>Marketing</h2><p>Given the importance of <strong>operation Planetscape</strong>, we wanted to onboard as many people as possible. We are not acquainted with custom and traditions of the early 2000<sup id="a1"><a href="#f1">1</a></sup> (remember, we are from the future) so we tried three orthogonal strategies to engage with attendees of the Congress.</p>
+<h3 id="Personal-Envelope"><a href="#Personal-Envelope" class="headerlink" title="Personal Envelope"></a>Personal Envelope</h3><p>Before reaching the Congress we handcrafted 35 personal letters and embedded them in envelopes<sup id="a2"><a href="#f2">2</a></sup>. Each letter contained the text with the call to action to open the website, start the game, and enter the password for <em>Chapter 0</em>. Three SDP members carried them around the congress to personally onboard attendees of 36C3. Handing the envelope was <strong>not</strong> a trivial task and required interaction to assess the willingness of the prospect to participate to the game. Remember, we had a limited number of envelopes, so we had to play them carefully.</p>
+<h3 id="Flyer-with-Tear-Off-Tabs"><a href="#Flyer-with-Tear-Off-Tabs" class="headerlink" title="Flyer with Tear-Off Tabs"></a>Flyer with Tear-Off Tabs</h3><p>Before reaching the Congress we printed several flyers<sup id="a3"><a href="#f3">3</a></sup> inviting attendees to visit the website of the game and start playing. The flyer had tear-off tabs containing the password to start the game<sup id="a4"><a href="#f4">4</a></sup>.</p>
+<h3 id="Twitter"><a href="#Twitter" class="headerlink" title="Twitter"></a>Twitter</h3><p>Another strategy was to use Twitter<sup name="a5"><a href="#f5">5</a></sup>. Right after starting the game we <a href="https://twitter.com/dist0rtionproto/status/1210986737188720640" target="_blank" rel="noopener">tweeted about it</a> on our profile.</p>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p>Like we did for Hunt Zuckerberg, before starting the game we had some goals in mind in terms of:</p>
+<ul>
+<li>number of users that plays the game</li>
+<li>number of users that finishes the game</li>
+</ul>
+<p>At the time of the first treasure hunt, we wanted to have at least 5 players (not including us) and at least 1 person finishing the game. We achieved the astounding result of 10 players (including 3 of us) and 3 players running for the final piece of the puzzle! Two of them are now honoured members of SDP (we love you Dina and Donald).</p>
+<p>With Planetscape we then decided to set the bar higher: at least 100 players and 2 people finishing the game.</p>
+<p>Our optimism was suggesting us to not expect anything more than 20 players, but given the aggressive marketing campaign and the complete lack of setup costs in order to start playing the game, we though 100 would have actually been a reasonable number.</p>
+<p>Final results:</p>
+<ul>
+<li>254 player (excluding us) joined the game and finished <strong>at least Chapter 0</strong>. You can check the <a href="https://adventure.dist0rtion.com/#/leaderboard" target="_blank" rel="noopener">list at the leaderboard</a>.</li>
+<li>3 players were running in parallel for the first price, it was really exciting to see that.</li>
+<li>Ultimately, 12 players finished the game.</li>
+<li>Some other players kept playing even after the CCC was over (somehow).</li>
+</ul>
+<p>And now, some charts!</p>
+<h3 id="Funnel"><a href="#Funnel" class="headerlink" title="Funnel"></a>Funnel</h3><p>This chart shows how many people ended their journey at any given Chapter. Let aside the initial chapters, it looks like chapter 5 was a tiny amount more complex than we thought. For who played, it was the one where the player needed to find a secret code around the Fairydust.</p>
+<p><img src="./funnel.png" alt=""></p>
+<h3 id="Difficulty"><a href="#Difficulty" class="headerlink" title="Difficulty"></a>Difficulty</h3><p>The following charts summarises the effective complexity of each chapter by means of the time (minutes) spent on it.<br>The boxes represent what 50% of the people did, the line in the middle is the median, the whiskers are the remaining top and bottom 25% of the players. Outliers have been omitted.</p>
+<p><img src="./difficulty.png" alt=""></p>
+<p>It seems like the most annoying chapter, for the players that got there, was the one involving the hunt of an access point at the congress. In fact, at some point, someone suddenly disconnected it and we found it out only an hour later. The general feedback was that that chapter was a pain in the ass.</p>
+<h2 id="What’s-next"><a href="#What’s-next" class="headerlink" title="What’s next"></a>What’s next</h2><p>On a technical side, Social Dist0rtion Protocol will continue the development of THC:</p>
+<ul>
+<li>Enable easier customization and theming of the dApp.</li>
+<li>Reduce technical debt introduced by last minute changes.</li>
+<li>Improve the overall documentation.</li>
+<li>Improve the IPFS part as well: right now the dApp fetches the assets from the centralized infura IPFS gateway. By using <a href="https://js.ipfs.io/" target="_blank" rel="noopener">js-ipfs</a> we can overcome this limitation and have a purely decentralized approach. There is still no known solution to avoid using centralized JSONRPC like infura.</li>
+</ul>
+<p>Given the feedback received, Social Dist0rtion Protocol is committed to repeat this operation for other events by creating more engaging stories and puzzles.</p>
+<h2 id="Stay-up-to-date"><a href="#Stay-up-to-date" class="headerlink" title="Stay up to date!"></a>Stay up to date!</h2><p>Subscribe to our <a href="https://lists.dist0rtion.com/postorius/lists/newsletter.lists.dist0rtion.com/" target="_blank" rel="noopener">Newsletter</a>, we will send you occasional updates about what we are doing. And don’t worry we won’t spam, we are too lazy for that.</p>
+<hr/>
+
+<p><em>Footnotes from the Future</em></p>
+<p><small><a name="f1">1</a>: Custom and traditions of humans of the early 2000 are not very well known in the year 2111. Most of the evidence and documents have been destroyed in <em>The Great DataCenter Meltdown™</em> dated 2051. Billions and billions and billions of relevant documents like Instagram selfies, Tiktok videos, Medium posts, memes, and tweets had been lost forever in this tragic event. That year is also remembered as <em>The Influence Extinction</em>, where millions of influencers had to quit social media and find a real job.<a href="#a1">↑</a></small></p>
+<p><small><a name="f2">2</a>: Textbooks report that humans, especially Teutons, really loved to read text printed on rectangular paper with an aspect ratio of √2 (for simplicity we can call this format ISO 216 A4) folded in three parts and placed inside a container about 10% larger. Moreover, studies showed that the text usually contained a clear indication of the sender and the receiver. We’ve also noticed that by following the strict rules of that time, the text related to the receiver would nicely show in the tiny transparent window located on the side of the envelope. The advanced envelope self-seal flip-and-stick design allowed us to fold the flaps and create a permanent bond to protect the content from eavesdropping attacks. Take that Eve! <a href="#a2">↑</a></small></p>
+<p><small><a name="f3">3</a>: Our research showed that flyers with “pull-tabs” or “tear-off tabs” were widely used by humans of the past to sell items, hopefully find lost objects and pets, promote courses to learn yoga, classes to learn the German language or play ukulele. Given the popularity of this methodology, we’ve decided to print some of those as well (always following the ISO 216 DIN A4 210×298mm format) and use the “pull-tab” or “tear-off tab” to allow humans to take the password to <em>Chapter 0</em> with them.<a href="#a3">↑</a></small></p>
+<p><small><a name="f4">4</a>: It’s worth noticing that given our the lack of skills to typeset the text correctly in the “pull-tabs” or “tear-off tabs”, we’ve decided to manually write the password on each “pull-tab” or “tear-off tab”. Our members really went the extra mile to make this happen, thank you from Social Dist0rtion Protocol to all Social Dist0rtion Protocol members involved in this process! <a href="#a4">↑</a></small></p>
+<p><small><a name="f5">5</a>: It’s important to note that Twitter was originally conceived as a social media platform where humans shared “tweets”: short messages that would usually trigger the so called “sheet storms”. We believe those “sheet storms” were long discussions about the most suitable paper size to use for a specific context (a wedding invitation, a letter to your grandmother telling her how much you love her, a post-card from an amusement park where giant terrifying rats dress with shirts but no trousers). After President Trump’s successfully started World War III via a tweet, Twitter decided to pivot to become the first platform to support only war declarations, hate speech, fake news, trolling, and baby yoda memes.<a href="#a5">↑</a></small></p>
+
+    </div>
+    
+        <hr class="fhr">
+        <div id="vcomments"></div>
+    
+</div>
+    <div class="footer" id="footer">
+</div>
+<input type="hidden" id="web_style" value="black">
+
+<script src="/libs/jquery.min.js"></script>
+
+
+<script src="/libs/highlight/highlight.pack.js"></script>
+
+
+<script src="/js/js.js"></script>
+
+<style type="text/css">
+.v * {
+    color: #698fca;
+}
+
+.v .vlist .vcard .vhead .vsys {
+    color: #3a3e4a;
+}
+
+.v .vlist .vcard .vh .vmeta .vat {
+    color: #638fd5;
+}
+
+.v .vlist .vcard .vhead .vnick {
+    color: #6ba1ff;
+}
+
+.v a {
+    color: #8696b1;
+}
+
+.v .vlist .vcard .vhead .vnick:hover {
+    color: #669bfc;
+}
+</style>
+
+</body>
+
+</html>
