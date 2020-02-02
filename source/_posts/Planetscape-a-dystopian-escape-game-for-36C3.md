@@ -1,5 +1,5 @@
 ---
-title: Planetscape
+title: Planetscape, a dystopian escape game for 36C3
 date: 2020/01/30
 ---
 
