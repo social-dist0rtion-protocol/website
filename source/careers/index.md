@@ -17,5 +17,5 @@ percs:
 - Unlimited holidays. CAN YOU BELIEVE THAT?????
 - Non-competitive salaries.
 
-Sound good? Then head over to [lists.dist0rtion.com](lists.dist0rtion.com) to
+Sound good? Then head over to [lists.dist0rtion.com](https://lists.dist0rtion.com) to
 apply as a Social Dist0rtion Protocol trainee today!
