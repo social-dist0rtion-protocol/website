@@ -71,17 +71,40 @@ In order to orchestrate all different components of the game, Social Dist0rtion 
 [THC][0] played a crucial role in the creation of the game, allowing us to meet our high standards in terms of development experience. But THC was more than that. Fast prototyping and automatic deploying gave us the piece of mind we needed during our last hours of work.
 
 ### Zero Knowledge Proof
-As mentioned earlier, every time a correct password is found, a transaction is sent to the smart contract. Ethereum transactions are public and we don't want players to sniff passwords submitted by others. To avoid that, we implemented a cheap zero-knowledge proof scheme. Roughly speaking, the scheme is the following:
+As mentioned earlier, every time a correct password is found, a transaction is sent to the smart contract. Ethereum transactions are public and we don't want players to sniff passwords submitted by others. To avoid that, we implemented a cheap zero-knowledge proof scheme.
 
-1. Given a valid `password`, a player's `player_address`:
-2. The dApp generates `seed = keccak256(password)`.
-3. The dApp generates `chapter_private_key` from `seed`.
-4. The dApp generates `signature = sign(address, chapter_private_key)`
-5. The dApp calls the `submit` method of the smart sontract passing `signature`.
-6. The smart contract checks the current `chapter` for `player_address` in its storage.
-7. The smart contract loads the `chapter_address` for `chapter`.
-8. The smart contracts calculates `signing_address` by doing an `ecrecover(player_address, signature)`.
-9. If `signing_address == chapter_address`, then the smart contract updates the current chapter for the player, moving them to the next chapter.
+First of all we need to understand how a chapter is associated to its address. We don't want to put passwords in the smart contract, otherwise anyone would be able to read them. Instead we store the address of the chapter. To generate the address we do:
+
+```
+chapter_address = private_key_to_address(
+  private_key_from_seed(
+    keccak256(
+      chapter_password
+    )
+  )
+)
+```
+
+The `chapter_address` is then used to verify if a user found the correct password.
+
+The smart contract stores the following information:
+- Chapters, identified by their sequential `id` such as `id ∈ [0, 2^96)`. Each `id` points to:
+  - The **address of the chapter**.
+  - The IPFS Content ID (CID) that points to the content of the chapter.
+  - The array of players that reached chapter.
+- Players, identified by their Ethereum address (type `address`, that is a `uint160`). Each player is associated with the current chapter they are in.
+
+Roughly speaking, the zero-knowledge proof scheme works by having the chapter signing the player's address. The smart contract has all information to check the siguature. If the signature is valid, the player can progress to the next chapter.
+
+Given a valid `chapter_password` and a `player_address`, this is the interaction between the dApp and the smart contract:
+
+1. The dApp generates `chapter_seed = keccak256(chapter_password)`.
+1. The dApp generates `chapter_private_key = private_key_from_seed(chapter_seed)`.
+1. The dApp generates `chapter_proof = sign(player_address, chapter_private_key)`
+1. The dApp calls the `submit` method of the smart contract passing `chapter_proof`.
+1. The smart contract checks the current `chapter_address` for `player_address` in its storage.
+1. The smart contracts calculates `signing_address` by doing `ecrecover(player_address, signature)`.
+1. If `signing_address == chapter_address`, then the smart contract updates the current chapter for the player, moving them to the next chapter.
 
 More information about the [creation][10] and [verification][11] of the proof can be found in the source code.
 
