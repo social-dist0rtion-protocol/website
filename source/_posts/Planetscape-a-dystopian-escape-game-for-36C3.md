@@ -88,11 +88,11 @@ chapter_address = private_key_to_address(
 The `chapter_address` is then used to verify if a user found the correct password.
 
 The smart contract stores the following information:
-- Chapters are sequential. They are identified by their `id` such as `id ∈ [0, 2^96)`. Each `id` points to:
+- Chapters, identified by their sequential `id` such as `id ∈ [0, 2^96)`. Each `id` points to:
   - The **address of the chapter**.
   - The IPFS Content ID (CID) that points to the content of the chapter.
   - The array of players that reached chapter.
-- Players are identified by their Ethereum address (type `address`, that is a `uint160`). Each player is associated with the current chapter they are in.
+- Players, identified by their Ethereum address (type `address`, that is a `uint160`). Each player is associated with the current chapter they are in.
 
 Roughly speaking, the zero-knowledge proof scheme works by having the chapter signing the player's address. The smart contract has all information to check the siguature. If the signature is valid, the player can progress to the next chapter.
 
