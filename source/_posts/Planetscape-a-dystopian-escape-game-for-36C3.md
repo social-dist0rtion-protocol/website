@@ -88,7 +88,7 @@ chapter_address = private_key_to_address(
 The `chapter_address` is then used to verify if a user found the correct password.
 
 The smart contract stores the following information:
-- Chapters are sequential. They are identified by their `id` such as `id ∈ [0, 2⁹⁶)`. Each `id` points to:
+- Chapters are sequential. They are identified by their `id` such as `id ∈ [0, 2^96)`. Each `id` points to:
   - The **address of the chapter**.
   - The IPFS Content ID (CID) that points to the content of the chapter.
   - The array of players that reached chapter.
